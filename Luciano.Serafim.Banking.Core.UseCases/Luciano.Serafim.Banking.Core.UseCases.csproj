@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Luciano.Serafim.Banking.Core.Models\Luciano.Serafim.Banking.Core.Models.csproj" />
+    <ProjectReference Include="..\Luciano.Serafim.Banking.Core.Abstractions\Luciano.Serafim.Banking.Core.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="mediatr" Version="12.4.0" />
+  </ItemGroup>
+</Project>

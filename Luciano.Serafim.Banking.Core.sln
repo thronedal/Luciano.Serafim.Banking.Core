@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Core", "1.Core", "{91F44283-C18D-4BA4-ADF5-C7E059C3FD5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.EntryPoint", "2.EntryPoint", "{CF9748BF-AA95-4FD9-9308-340EA02A9AEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Infrastructure", "3.Infrastructure", "{D77EF856-304A-4594-9BCF-6B40008B8B72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Crosscutting", "4.Crosscutting", "{D74EB65E-04B5-4208-BF3D-31B34E70EFB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Tests", "5.Tests", "{0045BF8C-6218-46F0-BAC1-7A35B68C9175}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.Api", "Luciano.Serafim.Banking.Core.Api\Luciano.Serafim.Banking.Core.Api.csproj", "{EC8369CA-24B7-4258-8A00-3A7724EF16DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.Bootstrap", "Luciano.Serafim.Banking.Core.Bootstrap\Luciano.Serafim.Banking.Core.Bootstrap.csproj", "{8D36779C-43D2-4C4D-A4AF-8A04B107363F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.Infrastructure", "Luciano.Serafim.Banking.Core.Infrastructure\Luciano.Serafim.Banking.Core.Infrastructure.csproj", "{73553EBD-69FD-420A-AC1C-9D2E1F2DC140}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.Tests", "Luciano.Serafim.Banking.Core.Tests\Luciano.Serafim.Banking.Core.Tests.csproj", "{203C1639-DDC0-43C9-A82D-D72EAA466C0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.Models", "Luciano.Serafim.Banking.Core.Models\Luciano.Serafim.Banking.Core.Models.csproj", "{FDC3CBB8-5F69-4B3A-80FB-5C7F911B61E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.Abstractions", "Luciano.Serafim.Banking.Core.Abstractions\Luciano.Serafim.Banking.Core.Abstractions.csproj", "{62190CD1-3F03-4BA7-BFBF-05E7ABF9D6D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.Utils", "Luciano.Serafim.Banking.Core.Utils\Luciano.Serafim.Banking.Core.Utils.csproj", "{53E0E745-B439-43D7-9180-7DECE7EB676E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.UseCases", "Luciano.Serafim.Banking.Core.UseCases\Luciano.Serafim.Banking.Core.UseCases.csproj", "{D83A723C-5589-4F61-8256-52B82433B4C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Luciano.Serafim.Banking.Core.MediatR", "Luciano.Serafim.Banking.Core.MediatR\Luciano.Serafim.Banking.Core.MediatR.csproj", "{C741F3CF-C129-48BF-B903-C8E888AFED97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC8369CA-24B7-4258-8A00-3A7724EF16DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8369CA-24B7-4258-8A00-3A7724EF16DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8369CA-24B7-4258-8A00-3A7724EF16DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8369CA-24B7-4258-8A00-3A7724EF16DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D36779C-43D2-4C4D-A4AF-8A04B107363F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D36779C-43D2-4C4D-A4AF-8A04B107363F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D36779C-43D2-4C4D-A4AF-8A04B107363F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D36779C-43D2-4C4D-A4AF-8A04B107363F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73553EBD-69FD-420A-AC1C-9D2E1F2DC140}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73553EBD-69FD-420A-AC1C-9D2E1F2DC140}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73553EBD-69FD-420A-AC1C-9D2E1F2DC140}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73553EBD-69FD-420A-AC1C-9D2E1F2DC140}.Release|Any CPU.Build.0 = Release|Any CPU
+		{203C1639-DDC0-43C9-A82D-D72EAA466C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{203C1639-DDC0-43C9-A82D-D72EAA466C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{203C1639-DDC0-43C9-A82D-D72EAA466C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{203C1639-DDC0-43C9-A82D-D72EAA466C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDC3CBB8-5F69-4B3A-80FB-5C7F911B61E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDC3CBB8-5F69-4B3A-80FB-5C7F911B61E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDC3CBB8-5F69-4B3A-80FB-5C7F911B61E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDC3CBB8-5F69-4B3A-80FB-5C7F911B61E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62190CD1-3F03-4BA7-BFBF-05E7ABF9D6D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62190CD1-3F03-4BA7-BFBF-05E7ABF9D6D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62190CD1-3F03-4BA7-BFBF-05E7ABF9D6D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62190CD1-3F03-4BA7-BFBF-05E7ABF9D6D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E0E745-B439-43D7-9180-7DECE7EB676E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E0E745-B439-43D7-9180-7DECE7EB676E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E0E745-B439-43D7-9180-7DECE7EB676E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E0E745-B439-43D7-9180-7DECE7EB676E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D83A723C-5589-4F61-8256-52B82433B4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D83A723C-5589-4F61-8256-52B82433B4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D83A723C-5589-4F61-8256-52B82433B4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D83A723C-5589-4F61-8256-52B82433B4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C741F3CF-C129-48BF-B903-C8E888AFED97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C741F3CF-C129-48BF-B903-C8E888AFED97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C741F3CF-C129-48BF-B903-C8E888AFED97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C741F3CF-C129-48BF-B903-C8E888AFED97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EC8369CA-24B7-4258-8A00-3A7724EF16DF} = {CF9748BF-AA95-4FD9-9308-340EA02A9AEB}
+		{8D36779C-43D2-4C4D-A4AF-8A04B107363F} = {D74EB65E-04B5-4208-BF3D-31B34E70EFB5}
+		{73553EBD-69FD-420A-AC1C-9D2E1F2DC140} = {D77EF856-304A-4594-9BCF-6B40008B8B72}
+		{203C1639-DDC0-43C9-A82D-D72EAA466C0F} = {0045BF8C-6218-46F0-BAC1-7A35B68C9175}
+		{FDC3CBB8-5F69-4B3A-80FB-5C7F911B61E4} = {91F44283-C18D-4BA4-ADF5-C7E059C3FD5A}
+		{62190CD1-3F03-4BA7-BFBF-05E7ABF9D6D1} = {91F44283-C18D-4BA4-ADF5-C7E059C3FD5A}
+		{53E0E745-B439-43D7-9180-7DECE7EB676E} = {91F44283-C18D-4BA4-ADF5-C7E059C3FD5A}
+		{D83A723C-5589-4F61-8256-52B82433B4C1} = {91F44283-C18D-4BA4-ADF5-C7E059C3FD5A}
+		{C741F3CF-C129-48BF-B903-C8E888AFED97} = {91F44283-C18D-4BA4-ADF5-C7E059C3FD5A}
+	EndGlobalSection
+EndGlobal

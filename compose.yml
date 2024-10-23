@@ -1,0 +1,27 @@
+services:  
+  liveorder-api:
+    image: banking-core-api:latest
+    build:
+      context: .
+      dockerfile: Luciano.Serafim.Banking.Core.Api/Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+      - redis
+  mongodb:
+    image: mongodb/mongodb-community-server:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - './.data:/data/db'
+  redis:
+    image: redis/redis-stack-server:latest
+    ports: 
+      - "6379:6379"   
+  mongo-express:
+    image: mongo-express:latest
+    ports: 8085:8081
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongodb
+
