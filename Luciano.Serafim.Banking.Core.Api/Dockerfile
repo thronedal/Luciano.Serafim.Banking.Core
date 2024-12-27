@@ -12,6 +12,18 @@ COPY ./Luciano.Serafim.Banking.Core.Bootstrap ./Luciano.Serafim.Banking.Core.Boo
 COPY ./Luciano.Serafim.Banking.Core.Infrastructure ./Luciano.Serafim.Banking.Core.Infrastructure
 COPY ./Luciano.Serafim.Banking.Core.Tests ./Luciano.Serafim.Banking.Core.Tests
 
+#Accounts
+COPY ./Accounts ./Accounts
+#COPY ./Accounts/Luciano.Serafim.Banking.Accounts.Abstractions ./Accounts/Luciano.Serafim.Banking.Accounts.Abstractions
+#COPY ./Accounts/Luciano.Serafim.Banking.Accounts.Models ./Accounts/Luciano.Serafim.Banking.Accounts.Models
+#COPY ./Accounts/Luciano.Serafim.Banking.Accounts.UseCases ./Accounts/Luciano.Serafim.Banking.Accounts.UseCases
+
+#People
+COPY ./People ./People
+
+#Events
+COPY ./Events ./Events
+
 RUN dotnet restore
 RUN dotnet publish -c Release -o out
 

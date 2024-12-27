@@ -19,7 +19,6 @@ using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
-using Luciano.Serafim.Banking.Core.Abstractions.Repositories;
 
 namespace Luciano.Serafim.Banking.Core.Bootstrap;
 
@@ -106,7 +105,7 @@ public static class ServiceExtensions
             // Set the comments path for the Swagger JSON and UI.
             c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetEntryAssembly()!.GetName().Name}.xml"));
             //search for project documentation files
-            var docFiles = Directory.GetFiles(AppContext.BaseDirectory, "Luciano.Serafim.Ebanks.*.xml");
+            var docFiles = Directory.GetFiles(AppContext.BaseDirectory, "Luciano.Serafim.*.xml");
             foreach (var file in docFiles)
             {
                 c.IncludeXmlComments(file);
@@ -129,7 +128,7 @@ public static class ServiceExtensions
 
         if (accountDatabase is null)
         {
-            services.AddScoped<IUnitOfWork, Infrastructure.UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddSingleton<IAccountRepository, Infrastructure.AccountRepository>();
             services.AddSingleton<IEventRepository, Infrastructure.EventRepository>();
         }

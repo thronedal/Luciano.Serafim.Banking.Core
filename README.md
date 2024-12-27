@@ -1,25 +1,40 @@
 # Luciano.Serafim.Banking.Core
 
-
+Solução para core banking.
 
 ## Estrutura
 
-Asolução é desenvolvida em .Net 8, e utiliza banco de dados mongoDB.
+A solução é desenvolvida em .Net 8, e utiliza banco de dados mongoDB.
 
 A solução foi criada utilizando os conceitos de clean architeture:
 
-- Api: Controllers;
-- Core: Abstrações, models/entidades, UseCases, e Classes utilitárias;
-- Infrastructure: Implementações de abstrações como por exemplo persistência;
-- Bootstrap: projeto transversal que efetua a ligação entre as camandas;
-- Tests: testes unitários.
+1. Core - núcleo do sistema contendo regras de negócio e abstrações para conectividade (tanto p/ entrypoint quanto para infrastructure)
+   - Abstrações, 
+   - models/entidades,
+   - UseCases, e
+   - Classes utilitárias
+2. Entrypoint - iniciadores de processamento
+   - API`s (controllers)
+   - Background workers (jobs, servless)
+3. Infrastructure - Implementações de abstrações como por exemplo persistência;
+   - Database
+   - Storage
+4. Crosscutting - projeto transversal que efetua a ligação entre as camandas;
+   - Bootstrap
+5. Tests
+   - Unit tests
+
+Dentro de cada um dos crupos acima cada microserviço pode ser especializado, ex.:
+- Accounts: gerenciamento da conta-corrente, CRUD, associaçao de titulares, ativaçã/inativação de funcionalidades, etc..;
+- People: gerenciamento de pessoas, CRUD, gestão de dados (LGPD);, etc..
+- Events: gerenciamento de eventos, lançamentos de movimentação, saldo, extrato, etc..;
 
 ## executar através do compose
 
 A api deve inciar na seguinte [url](http://localhost:8080/swagger)
 
 ```bash
-docker compose -f "compose.yml" up -d --build
+docker compose -f "compose.debug.yml" up -d --build
 ```
 
 ## configurações
@@ -28,14 +43,19 @@ As configurações estão todas baseadas na execução via docker-compose, ou se
 
 - [appsettings.json](Luciano.Serafim.Banking.Core.Api/appsettings.json)
 
-Para utilizar o mongoDb utilize a configuração, a ausencia da chave "MongoDb" implica no uso de armazenamento em memória:
+Strings de conexão devem ser adicionadas a chave "ConnectionStrings" e seguir o formato abaixo para cada tecnologia: 
+
+- [redis](https://stackexchange.github.io/StackExchange.Redis/Configuration.html)
+- [mongoDb](https://www.mongodb.com/docs/drivers/csharp/upcoming/fundamentals/connection/connect/)
+
+exemplo:
 
 ```json
 {
-  "MongoDb": {
-    "Host": "172.31.255.105",
-    "Port": "27017",
-    "DatabaseName": "banking-core"
+  "ConnectionStrings": {
+    "AccountDatabase": "mongodb://mongodb:27017",
+    "DistributedLock": "redis,allowAdmin=true",
+    "RedisCache": "redis,allowAdmin=true"
   }
 }
 ```

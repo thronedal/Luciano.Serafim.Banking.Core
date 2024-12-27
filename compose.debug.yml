@@ -51,3 +51,4 @@ services:
     container_name: dashboard
     ports:
      - 18888:18888
+     - 18889:18889
